@@ -1,14 +1,9 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 
-/**
- * Quartz 4 Configuration
- *
- * See https://quartz.jzhao.xyz/configuration for more information.
- */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "🧠 Neural Vault",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -23,32 +18,32 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        header: "JetBrains Mono",
+        body: "Inter",
+        code: "JetBrains Mono",
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          light: "#fbf1c7",        // gruvbox light bg
+          lightgray: "#ebdbb2",    // gruvbox light bg1
+          gray: "#a89984",         // gruvbox light gray
+          darkgray: "#504945",     // gruvbox light fg4
+          dark: "#3c3836",         // gruvbox light fg
+          secondary: "#af3a03",    // gruvbox orange
+          tertiary: "#79740e",     // gruvbox yellow-green
+          highlight: "rgba(215, 153, 33, 0.15)",
+          textHighlight: "#d7991288",
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          light: "#282828",        // gruvbox dark bg
+          lightgray: "#3c3836",    // gruvbox dark bg1
+          gray: "#665c54",         // gruvbox dark bg4
+          darkgray: "#bdae93",     // gruvbox dark fg3
+          dark: "#ebdbb2",         // gruvbox dark fg
+          secondary: "#fe8019",    // gruvbox orange
+          tertiary: "#b8bb26",     // gruvbox green
+          highlight: "rgba(254, 128, 25, 0.15)",
+          textHighlight: "#d7991288",
         },
       },
     },
@@ -62,9 +57,9 @@ const config: QuartzConfig = {
       Plugin.SyntaxHighlighting({
         theme: {
           light: "github-light",
-          dark: "github-dark",
+          dark: "one-dark-pro",
         },
-        keepBackground: false,
+        keepBackground: true,
       }),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
@@ -88,10 +83,9 @@ const config: QuartzConfig = {
       Plugin.Static(),
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
-      // Comment out CustomOgImages to speed up build time
-      Plugin.CustomOgImages(),
+      // CustomOgImages disabled — emoji in headings causes build failure
+      // Plugin.CustomOgImages(),
     ],
   },
 }
-
 export default config
