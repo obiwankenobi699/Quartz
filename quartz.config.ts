@@ -5,8 +5,8 @@ const config: QuartzConfig = {
   configuration: {
     pageTitle: "🧠 Neural Vault",
     pageTitleSuffix: "",
-    enableSPA: true,
-    enablePopovers: true,
+    enableSPA: false,
+    enablePopovers: false,
 
     analytics: {
       provider: "plausible",
@@ -15,7 +15,7 @@ const config: QuartzConfig = {
     locale: "en-US",
 
     // ✅ FIXED (critical for Vercel)
-    baseUrl: "https://neural-vault-delta.vercel.app",
+    baseUrl: "neural-vault-delta.vercel.app",
 
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
