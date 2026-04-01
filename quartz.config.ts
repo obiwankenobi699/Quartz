@@ -15,7 +15,7 @@ const config: QuartzConfig = {
     locale: "en-US",
 
     // ✅ FIXED (critical for Vercel)
-    baseUrl: "neural-vault-delta.vercel.app",
+    baseUrl: "https://neural-vault-delta.vercel.app",
 
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
